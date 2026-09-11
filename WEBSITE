@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YDN STORE</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background-color: #FFFFFF; color: #111111; }
+  header { background-color: #E51923; color: #FFFFFF; padding: 20px; text-align: center; }
+  header img { height: 120px; border-radius: 50%; border: 3px solid #FFFFFF; }
+  .products { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 20px; }
+  .product { border: 2px solid #EEEEEE; padding: 15px; border-radius: 8px; width: 280px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .btn { background-color: #25D366; color: white; border: none; padding: 12px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; width: 100%; margin-top: 10px; }
+  .btn:hover { background-color: #128C7E; }
+</style>
+</head>
+<body>
+<header>
+  <img src="1000085437.jpg" alt="YDN Store Logo"> 
+  <h1>YDN STORE</h1>
+  <p>Authentic Sneakers & Streetwear</p>
+</header>
+<div class="products">
+  <div class="product">
+    <h3>Nike Air Jordan 1 High</h3>
+    <p>R 2,500</p>
+    <!-- Replace 27YOURNUMBER with your actual business WhatsApp number -->
+    <button class="btn" onclick="buy('Nike Air Jordan 1 High', '2500')">Buy via WhatsApp</button>
+  </div>
+</div>
+<script>
+  function buy(item, price) {
+    const phone = "27YOURNUMBER"; 
+    const message = encodeURIComponent(`Hi YDN Store! I want to buy the ${item} for R${price}. Is it available?`);
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  }
+</script>
+</body>
+</html>
